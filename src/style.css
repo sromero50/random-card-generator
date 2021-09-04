@@ -1,1 +1,61 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+
+.card {
+  width: 300px;
+  height: 500px;
+  background-color: honeydew;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.card.heart .top,
+.card.heart .bottom,
+.card.diamond .top,
+.card.diamond .bottom {
+  color: red;
+}
+
+.card.spade .top,
+.card.spade .bottom,
+.card.club .top,
+.card.club .bottom {
+  color: black;
+}
+
+.top {
+  position: absolute;
+  left: 15px;
+  font-size: 80px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  font-size: 80px;
+  transform: scale(-1, -1);
+}
+
+.number {
+  line-height: 500px;
+  text-align: center;
+  font-size: 80px;
+}
+
+#new {
+  background-color: #b1963e;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
