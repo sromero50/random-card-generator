@@ -84,7 +84,7 @@ function cardGenerator() {
   }
 }
 
-// Boton new card--------------------------------------------------------
+// Button new card--------------------------------------------------------
 
 window.prueba = function prueba() {
   let newCard = document.querySelector("#new");
