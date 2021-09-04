@@ -62,24 +62,24 @@ function cardGenerator() {
   bottom.innerHTML = top.innerHTML;
 
   if (bottom.innerHTML === "♥") {
-    document.querySelector("div").classList.remove("diamond");
-    document.querySelector("div").classList.remove("spade");
-    document.querySelector("div").classList.remove("club");
+    document.querySelector("#test").classList.remove("diamond");
+    document.querySelector("#test").classList.remove("spade");
+    document.querySelector("#test").classList.remove("club");
     return document.querySelector(".card").classList.add("heart");
   } else if (bottom.innerHTML === "♦") {
-    document.querySelector("div").classList.remove("heart");
-    document.querySelector("div").classList.remove("spade");
-    document.querySelector("div").classList.remove("club");
+    document.querySelector("#test").classList.remove("heart");
+    document.querySelector("#test").classList.remove("spade");
+    document.querySelector("#test").classList.remove("club");
     return document.querySelector(".card").classList.add("diamond");
   } else if (bottom.innerHTML === "♠") {
-    document.querySelector("div").classList.remove("diamond");
-    document.querySelector("div").classList.remove("heart");
-    document.querySelector("div").classList.remove("club");
+    document.querySelector("#test").classList.remove("diamond");
+    document.querySelector("#test").classList.remove("heart");
+    document.querySelector("#test").classList.remove("club");
     return document.querySelector(".card").classList.add("spade");
   } else if (bottom.innerHTML === "♣") {
-    document.querySelector("div").classList.remove("diamond");
-    document.querySelector("div").classList.remove("spade");
-    document.querySelector("div").classList.remove("heart");
+    document.querySelector("#test").classList.remove("diamond");
+    document.querySelector("#test").classList.remove("spade");
+    document.querySelector("#test").classList.remove("heart");
     return document.querySelector(".card").classList.add("club");
   }
 }
@@ -94,4 +94,20 @@ window.prueba = function prueba() {
 // Timer 10 secs----------------------------------------------------------
 setInterval(cardGenerator, 10000);
 
-// ----------------------------------------------------------
+//Set width and height manually ----------------------------------------------------------
+
+var btn = document.querySelector("#submit");
+btn.addEventListener("click", func);
+
+function func() {
+  let width = document.querySelector("#width").value;
+  let height = document.querySelector("#height").value;
+  let cambio = document.querySelector(".card");
+
+  cambio.style.width = width + "px";
+  if (height >= 400) {
+    return (cambio.style.height = height + "px");
+  } else {
+    alert("Not available");
+  }
+}
